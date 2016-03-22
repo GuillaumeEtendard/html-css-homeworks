@@ -6,48 +6,73 @@
 
 .menu li {
   display: inline-block;
-  background-color: #eeeeee;
-  width: 70px;
-  height:30px;
-  color: black;
+  background-color: #3498db;
+  width: 150px;
+  height:50px;
+  text-align: center;
 }
+/*
 .menu ul li {
   display: inherit;
-}
+}*/
 .menu a {
   text-decoration: none;
-  display: block;
-  color:#000;
+  color:#ecf0f1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.menu a:hover{
+  background-color: #2ecc71;
+  color: #2c3e50;
+  transition:0.5s;
+
+}
+
 .menu ul {
   position: absolute;
   display: none;
-  text-align: left;
-  z-index: 1000;
+  text-align: center;
 }
 .menu li:hover ul {
   display: block;
 }
 
-.menu li:hover .list1sss {
-  animation-name: slideInDown;
-  width: 2000px;
+.menu li:hover .subMenu1 {
+  width: 100px;
+  animation-name: slideDown;
+  animation-duration: 1s;
+  z-index:-1;
 }
 
-@keyframes slideInDown {
+.menu li:hover .subMenu2{
+  display: none;
+}
+
+.menu .country:hover .subMenu2{
+  display: block;
+  animation-name: slideDown;
+  animation-duration: 1s;
+  z-index:-1;
+}
+
+@keyframes slideDown {
   from {
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-    visibility: visible;
+    opacity: 0;
+    transform: translate3d(0, -50px, 0);
   }
 
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    transform: none;
   }
 }
 
-.slideInDown {
-  -webkit-animation-name: slideInDown;
-  animation-name: slideInDown;
+.line{
+  margin: 0 auto;
+  display: block;
+  width:100px
 }
