@@ -1,0 +1,121 @@
+@mixin logInButton{
+  margin: 0 auto;
+  display: block;
+  padding: 12px 80px;
+  border-radius: 10px;
+  border: none;
+  color: #ffffff;
+  background-image:linear-gradient(to right, #e67e22, #c0392b);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+@mixin bodyCenter{
+  height: 100%;
+  display: table;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  vertical-align: middle;
+}
+
+@mixin windowModal{
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  pointer-events: none;
+}
+
+@mixin modal{
+  max-width: 300px;
+  position: relative;
+  margin: 1% auto;
+  padding: 20px;
+  border-radius: 5px;
+  background: #eee;
+}
+
+html, body, table {
+  @include bodyCenter();
+}
+
+body {
+  display: table-cell;
+}
+
+.form{
+  width: 25%;
+  margin: 0 auto;
+}
+
+input[type=email],
+input[type=password]{
+  margin: 5px auto;
+  display: block;
+  height: 40px;
+  width: 250px;
+  border-radius: 5px;
+  border: 1px solid #bdc3c7;
+}
+
+.title{
+  text-align: center;
+  font-size: 40px;
+  margin: 0 0 20px 0 ;
+  position: relative;
+}
+
+.borderForm{
+  border: 1px solid #3498db;
+}
+
+label{
+    margin: 0 0 0 0;
+}
+
+#labelEmail{
+  margin-left: -125px;
+}
+
+#labelPassword{
+  margin-left: -165px;
+}
+
+.signUp,
+.forgotPassword{
+  text-align: center;
+}
+
+.signUp{
+  margin: 20px 0 0 0;
+}
+
+.forgotPassword{
+  margin: 5px 0 40px 0;
+}
+
+.signUp a,
+.forgotPassword a{
+  text-decoration: none;
+}
+
+.button{
+  @include logInButton();
+}
+
+.right {
+  float:right;
+}
+
+.window {
+  @include windowModal();
+}
+
+.modal {
+  @include modal();
+}
