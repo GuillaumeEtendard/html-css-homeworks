@@ -1,23 +1,6 @@
-.menu, .menu ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.menu li {
-  display: inline-block;
-  background-color: #3498db;
-  width: 150px;
-  height:50px;
-  text-align: center;
-}
-/*
-.menu ul li {
-  display: inherit;
-}*/
-.menu a {
+@mixin linkMenu {
   text-decoration: none;
-  color:#ecf0f1;
+  color: #ecf0f1;
   height: 100%;
   width: 100%;
   display: flex;
@@ -25,11 +8,40 @@
   align-items: center;
 }
 
-.menu a:hover{
+@mixin animation {
+  animation-name: slideDown;
+  animation-duration: 1s;
+  z-index: -1;
+}
+
+@mixin listElement{
+  display: inline-block;
+  background-color: #3498db;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+}
+
+$transition : 0.5s;
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu li {
+  @include listElement();
+}
+
+.menu .link {
+  @include linkMenu();
+}
+
+.menu .link:hover {
   background-color: #2ecc71;
   color: #2c3e50;
-  transition:0.5s;
-
+  transition: $transition;
 }
 
 .menu ul {
@@ -37,26 +49,25 @@
   display: none;
   text-align: center;
 }
+
 .menu li:hover ul {
   display: block;
 }
 
 .menu li:hover .subMenu1 {
   width: 100px;
-  animation-name: slideDown;
-  animation-duration: 1s;
-  z-index:-1;
+  @include animation();
 }
 
-.menu li:hover .subMenu2{
+.menu li:hover .subMenu2 {
   display: none;
 }
 
-.menu .country:hover .subMenu2{
+.menu .otherCountries:hover .subMenu2 {
   display: block;
-  animation-name: slideDown;
-  animation-duration: 1s;
-  z-index:-1;
+  @include animation();
+  margin-left: 150px;
+  margin-top: -50px;
 }
 
 @keyframes slideDown {
@@ -71,8 +82,8 @@
   }
 }
 
-.line{
+.line {
   margin: 0 auto;
   display: block;
-  width:100px
+  width: 100px
 }
