@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sun</title>
+    <style rel="stylesheet">
+        svg circle, image {
+            animation-name: rotateOut;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        svg circle {
+            stroke-dasharray: 4, 4;
+            stroke-dashoffset: 500;
+            animation: yellowToOrange 20s infinite linear forwards;
+        }
+        svg text {
+            animation: yellowToOrange 20s infinite linear forwards, bounceInLeft 2s;
+            fill: yellow;
+        }
+
+        @keyframes bounceInLeft {
+            from, 60%, 75%, 90%, to {
+                animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            }
+            0% {
+                opacity: 0;
+                transform: translate3d(-3000px, 0, 0);
+            }
+            60% {
+                opacity: 1;
+                transform: translate3d(25px, 0, 0);
+            }
+            75% {
+                transform: translate3d(-10px, 0, 0);
+            }
+            90% {
+                transform: translate3d(5px, 0, 0);
+            }
+            to {
+                transform: none;
+            }
+        }
+        @keyframes rotateOut {
+            from {
+                transform-origin: center;
+            }
+            to {
+                transform-origin: center;
+                transform: rotate3d(0, 0, 1, 360deg);
+            }
+        }
+        @keyframes yellowToOrange {
+            0% {
+                fill: #FFFF00;
+                stroke: #FFFF00;
+            }
+            50% {
+                stroke-dashoffset: 0;
+                fill: #ff9c00;
+                stroke: #ff9c00;
+            }
+            100% {
+                fill: #FFFF00;
+                stroke: #FFFF00;
+            }
+        }
+    </style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <svg width="1000" height="1000" viewBox="0 0 1000 1000">
+        <circle cx="100" cy="60" r="40" fill="yellow" stroke="yellow" stroke-dasharray="4,4" stroke-width="30"></circle>
+        <image xlink:href="the_best_man_of_all.png" x="75" y="35" height="50px" width="50px"/>
+        <text x="60" y="140">Praise the Sun !</text>
+    </svg>
+</svg>
+</body>
+</html>

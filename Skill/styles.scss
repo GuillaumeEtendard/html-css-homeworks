@@ -1,0 +1,43 @@
+@mixin SVG($stroke,$strokeDashArray,$strokeDashArray) {
+  stroke: $stroke;
+  stroke-dasharray: $strokeDashArray;
+  stroke-dashoffset: $strokeDashArray;
+}
+
+@mixin Animation($animationName,$animationDuration,$animationDelay,$animationIterationCount) {
+  animation: $animationName $animationDuration $animationDelay $animationIterationCount;
+}
+
+.HTMLCircle {
+  @include SVG(#e34f26, 1, 500);
+  @include Animation(border, 6s, 0s, infinite)
+}
+
+.CSSCircle {
+  @include SVG(#0d84ce, 1, 500);
+  @include Animation(border, 6s, 1s, infinite)
+}
+
+.JSCircle {
+  @include SVG(#f0e040, 1, 500);
+  @include Animation(border, 6s, 2s, infinite)
+}
+
+.NodeJSCircle {
+  @include SVG(#83cd29, 1, 500);
+  @include Animation(border, 6s, 3s, infinite)
+}
+
+@keyframes border {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  display: table-cell;
+}
