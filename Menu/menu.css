@@ -1,0 +1,64 @@
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.menu li {
+  display: inline-block;
+  background-color: #3498db;
+  width: 150px;
+  height: 50px;
+  text-align: center; }
+
+.menu .link {
+  text-decoration: none;
+  color: #ecf0f1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.menu .link:hover {
+  background-color: #2ecc71;
+  color: #2c3e50;
+  transition: 0.5s; }
+
+.menu ul {
+  position: absolute;
+  display: none;
+  text-align: center; }
+
+.menu li:hover ul {
+  display: block; }
+
+.menu li:hover .subMenu1 {
+  width: 100px;
+  animation-name: slideDown;
+  animation-duration: 1s;
+  z-index: -1; }
+
+.menu li:hover .subMenu2 {
+  display: none; }
+
+.menu .otherCountries:hover .subMenu2 {
+  display: block;
+  animation-name: slideDown;
+  animation-duration: 1s;
+  z-index: -1;
+  margin-left: 150px;
+  margin-top: -50px; }
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -50px, 0); }
+  to {
+    opacity: 1;
+    transform: none; } }
+.line {
+  margin: 0 auto;
+  display: block;
+  width: 100px; }
+
+/*# sourceMappingURL=menu.css.map */
