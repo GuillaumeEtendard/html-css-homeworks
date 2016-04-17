@@ -1,0 +1,372 @@
+/*Fonts Imports*/
+@font-face {
+    font-family: "FoundersGrotesk";
+    src: url('../fonts/FoundersGrotesk/FoundersGrotesk-Regular.ttf');
+}
+
+@font-face {
+    font-family: "StanleyPoster";
+    src: url('../fonts/StanleyPoster/Stanley-Poster.ttf');
+}
+
+@font-face {
+    font-family: "EngraversGothic";
+    src: url('../fonts/EngraversGothic/EngraversGothicBT-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Aileron-Regular";
+    src: url('../fonts/Aileron/Aileron-Regular.otf');
+}
+
+@font-face {
+    font-family: "Aileron-Italic";
+    src: url('../fonts/Aileron/Aileron-Italic.otf');
+    font-style: italic;
+}
+
+/* Header */
+
+/* */
+
+.headerTop {
+    display: table;
+    height: 45px;
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.loginRegister {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+    padding-left: 375px;
+}
+
+.loginRegister li:nth-of-type(1) {
+    border-right: 1px dashed #e5e5e5;
+}
+
+.loginRegister li {
+    padding: 0 11px;
+}
+
+.loginRegister a {
+    color: #adadad;
+    text-decoration: none;
+}
+
+.shoppingCartSearch {
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 385px;
+}
+
+.shoppingCartSearch li {
+    float: right;
+}
+
+.shoppingCartSearch li:nth-of-type(2) {
+    padding: 0 15px;
+    border-right: 1px dashed #e5e5e5;
+}
+
+/* */
+
+.loginRegister li {
+    display: inline-block;
+}
+
+.mainMenu {
+    position: relative;
+    margin-top: 15.8%;
+    text-align: center;
+    width: 100%;
+    font-family: FoundersGrotesk, sans-serif;
+    font-size: 14px;
+    padding: 25px 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    color: #000000;
+    margin-bottom: 24px;
+}
+
+.mainMenu > li {
+    display: inline-block;
+    padding: 0 25px;
+    height: 10px;
+    cursor: pointer;
+}
+
+.mainMenu > li:not(.home) {
+    border-left: 1px dashed #bbbbbb;
+}
+
+svg {
+    left: 8px;
+    position: relative;
+    height: 100%;
+}
+
+/* Hover Menu */
+
+.subMenu {
+    position: absolute;
+    display: none;
+    text-align: center;
+}
+
+.mainMenu li:hover .subMenu {
+    width: 919px;
+    height: 408px;
+    animation-name: slideDown;
+    animation-duration: 1s;
+    z-index: 1;
+    display: block;
+    margin-left: -25px;
+    border: 1px solid #e5e5e5;
+    background-color: #ffffff;
+    cursor: default;
+    padding: 30px 24px;
+
+}
+
+.subMenu > li {
+    display: block;
+    padding: 10px 0;
+    cursor: pointer;
+    width: 200px;
+    text-align: left;
+    font-family: FoundersGrotesk, sans-serif;
+    font-size: 14px;
+}
+
+.subMenu > li:not(.first) {
+    border-bottom: 1px dashed #bbbbbb;
+}
+
+.subMenu > li:nth-of-type(1) {
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+
+.right {
+    position: relative;
+    left: 220px;
+    top: -350px;
+}
+
+.creators{
+    position: relative;
+    left:450px;
+    top:-542px;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+.subMenu2{
+    position: relative;
+    left:450px;
+    top:-523px;
+}
+
+.subMenu2Right{
+    position: relative;
+    left:700px;
+    top:-871px;
+}
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -50px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Content Home */
+/* First part of Content Home */
+.mode {
+    width: 1261px;
+    height: 631px;
+    background: url("../images/Mode-tuile.png") no-repeat;
+    position: relative;
+    margin: 0 auto;
+    top: 17%;
+    display: table;
+}
+
+.mode p, .restaurant p, .artGallery p {
+    color: #fefefe;
+    font-size: 50px;
+    font-family: StanleyPoster, sans-serif;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*Second part of Content Home*/
+.secondContentHome {
+    position: relative;
+    display: table;
+    margin: 0 auto;
+    padding-top: 19px;
+}
+
+.secondContentHome li {
+    float: left;
+}
+
+.secondContentHome li:nth-of-type(2) {
+    margin: 0 21px;
+}
+
+/*Restaurant content*/
+.restaurant {
+    width: 406px;
+    height: 492px;
+    background: url("../images/food.png") no-repeat;
+    display: table;
+    float: left;
+}
+
+/*Newsletter Content*/
+.newsletter {
+    width: 407px;
+    height: 217px;
+    background: url("../images/Newsletter-tuile.png") no-repeat;
+    display: table;
+}
+
+.newsletterContent {
+    text-transform: uppercase;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.newsletterForm {
+    height: 38px;
+}
+
+.emailInput {
+    width: 250px;
+    height: 100%;
+    position: relative;
+    left: 4px;
+    border: none;
+}
+
+.submitButton {
+    /*width: 107px;*/
+    /*height: 100%;*/
+    background-color: #a9c7bf;
+    color: #ffffff;
+    width: 105px;
+    height: 40px;
+    text-align: center;
+    border: none;
+
+}
+
+/* Social Networks Content*/
+.socialNetworks {
+    height: 247px;
+    width: 407px;
+    background-color: #575757;
+    margin-top: 20px;
+    display: table;
+}
+
+.socialNetworksContent {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.socialNetworks p, .newsletter p {
+    font-size: 18px;
+    text-align: center;
+    color: #ffffff;
+    font-family: Aileron-Regular, sans-serif;
+}
+
+.socialNetworks .socialNetworksFirstLine {
+    text-transform: uppercase;
+}
+
+.socialNetworks .socialNetworksSecondLine {
+    font-size: 14px;
+}
+
+.fa {
+    color: #a9c7bf;
+    margin: 0 7px;
+}
+
+/* Art gallery Content */
+.artGallery {
+    width: 406px;
+    height: 492px;
+    background: url("../images/7226230002BookOfLifeside2.jpg") no-repeat 30% 80%;
+    background-size: 150% 100%;
+    top: 19px;
+    right: 326px;
+    display: table;
+}
+
+/* Footer */
+.footerContent {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 15px 0;
+    display: table;
+    margin: 20px auto 0 auto;
+}
+
+.footerContent li {
+    padding: 5px 0;
+    font-family: FoundersGrotesk, sans-serif;
+}
+
+.infos {
+    margin: 0 21px;
+}
+
+.black {
+    color: #1b1b1b;
+}
+
+.archive li:nth-of-type(1), .infos li:nth-of-type(1), .followUs li:nth-of-type(1) {
+    font-family: StanleyPoster, sans-serif;
+    font-weight: bold;
+    margin: auto auto 20px auto;
+}
+
+.archive, .infos, .followUs {
+    display: inline-block;
+    text-align: center;
+    width: 406px;
+    height: 100%;
+    float: left;
+
+}
+
+.footerCopyright {
+    text-align: center;
+    padding: 15px 0;
+    font-family: "Myriad Pro", sans-serif;
+    font-size: 14px;
+}
+
+.smallInput {
+    width: 210px;
+    height: 30px;
+    border: 1px solid #e3e3e3;
+}
+
+.smallButton {
+    width: 90px;
+    height: 33px;
+}
