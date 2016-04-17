@@ -43,17 +43,16 @@
     padding-left: 375px;
 }
 
+.loginRegister li {
+    padding: 0 11px;
+}
 .loginRegister li:nth-of-type(1) {
     border-right: 1px dashed #e5e5e5;
 }
 
-.loginRegister li {
-    padding: 0 11px;
-}
-
 .loginRegister a {
-    color: #adadad;
     text-decoration: none;
+    color: #adadad;
 }
 
 .shoppingCartSearch {
@@ -128,7 +127,6 @@ svg {
     background-color: #ffffff;
     cursor: default;
     padding: 30px 24px;
-
 }
 
 .subMenu > li {
@@ -141,7 +139,7 @@ svg {
     font-size: 14px;
 }
 
-.subMenu > li:not(.first) {
+.subMenu > li:not(.noneBorder) {
     border-bottom: 1px dashed #bbbbbb;
 }
 
@@ -173,6 +171,10 @@ svg {
     position: relative;
     left:700px;
     top:-871px;
+}
+
+.red{
+    color: #932828;
 }
 @keyframes slideDown {
     from {
